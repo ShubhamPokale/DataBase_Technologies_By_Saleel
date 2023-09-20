@@ -1,0 +1,161 @@
+Assingment 003 (Saleel Sir)
+
+Name: Shubham Pokale and Prathamesh Kulkarni
+
+Q1.List all courses
+
+mysql> select * from course;
++----+---------+----------+------------------------------------+
+| ID | name    | duration | summery                            |
++----+---------+----------+------------------------------------+
+|  1 | PG-DAC  |        6 | This course is designed by CDAC    |
+|  2 | DBDA    |        6 | This course is designed by CDAC    |
+|  3 | Pre-DAC |        2 | This course is designed by CDAC    |
+|  4 | JAVA    |        3 | This course is designed by Infoway |
+|  5 | .NET    |        3 | This course is designed by Infoway |
+|  6 | DMC     |        6 | This course is designed by CDAC    |
+|  7 | DSSD    |        6 | This course is designed by CDAC    |
++----+---------+----------+------------------------------------+
+7 rows in set (0.00 sec)
+
+Q2. List namefirst, namelast of all student.
+
+SELECT namefirst,namelast from student;
++-----------+----------+
+| namefirst | namelast |
++-----------+----------+
+| saleel    | bagde    |
+| omkar     | rokde    |
+| ulka      | joshi    |
+| rahul     | patil    |
+| ruhan     | bagde    |
+| lala      | prasad   |
+| sharmin   | bagde    |
+| vrushali  | bagde    |
+| vasant    | khande   |
+| nitish    | patil    |
+| neel      | save     |
+| deep      | save     |
+| nrupali   | save     |
+| supriya   | karnik   |
+| bandish   | karnik   |
+| sangita   | karnik   |
+| sangita   | menon    |
+| rahul     | shah     |
+| bhavin    | patel    |
+| kaushal   | patil    |
+| pankaj    | gandhi   |
+| rajan     | patel    |
+| bhavin    | patel    |
+| mukesh    | bhavsar  |
+| dilu      | khande   |
+| sonam     | khan     |
+| rohit     | patil    |
+| raj       | bubber   |
++-----------+----------+
+28 rows in set (0.00 sec)
+
+Q3.List namefirst, namelast,DOB and emailID of all students
+
+
+SELECT namefirst,namelast, DOB, emailID from student;
++-----------+----------+------------+--------------------------+
+| namefirst | namelast | DOB        | emailID                  |
++-----------+----------+------------+--------------------------+
+| saleel    | bagde    | 1984-06-12 | saleel.bagde@gmail.com   |
+| omkar     | rokde    | 1969-10-25 | omkar.rakde@gmail.com    |
+| ulka      | joshi    | 1970-10-25 | ulka.joshi@gmail.com     |
+| rahul     | patil    | 1982-10-31 | rahul.patil@gmail.com    |
+| ruhan     | bagde    | 1984-01-12 | ruhan.bagde@gmail.com    |
+| lala      | prasad   | 1980-12-01 | lala.prasad@gmail.com    |
+| sharmin   | bagde    | 1986-12-14 | sharmin.bagde@gmail.com  |
+| vrushali  | bagde    | 1984-12-29 | vrushali.bagde@gmail.com |
+| vasant    | khande   | 1992-10-26 | vasant.khande@gmail.com  |
+| nitish    | patil    | 1990-10-26 | nitish.patil@gmail.com   |
+| neel      | save     | 1975-10-30 | neel.save@gmail.com      |
+| deep      | save     | 1986-11-30 | deep.save@gmail.com      |
+| nrupali   | save     | 1981-12-01 | nrupali.save@gmail.com   |
+| supriya   | karnik   | 1983-12-15 | supriya.karnik@gmail.com |
+| bandish   | karnik   | 1987-12-30 | bandish.karnik@gmail.com |
+| sangita   | karnik   | 1990-12-01 | sangita.karnik@gmail.com |
+| sangita   | menon    | 1989-10-26 | sangita.menon@gmail.com  |
+| rahul     | shah     | 1982-06-12 | rahul.shah@gmail.com     |
+| bhavin    | patel    | 1983-11-13 | bhavin.patel@gmail.com   |
+| kaushal   | patil    | 1982-07-30 | kaushal.patil@gmail.com  |
+| pankaj    | gandhi   | 1982-07-30 | pankaj.gandhi@gmail.com  |
+| rajan     | patel    | 1982-07-30 | rajan.patel@gmail.com    |
+| bhavin    | patel    | 1982-07-30 | bhavin.patel@gmail.com   |
+| mukesh    | bhavsar  | 1982-07-30 | mukesh.bhavsar@gmail.com |
+| dilu      | khande   | 1982-07-30 | dilu.khande@gmail.com    |
+| sonam     | khan     | 1972-05-13 | sonam.khan@gmail.com     |
+| rohit     | patil    | 1976-12-31 | rohit.patil@gmail.com    |
+| raj       | bubber   | 1982-02-28 | raj.bubber@gmail.com     |
++-----------+----------+------------+--------------------------+
+28 rows in set (0.00 sec)
+
+Q4.  Display student information of the ID is 15.
+
+select * from student where ID=15;
++----+-----------+----------+------------+--------------------------+
+| ID | namefirst | namelast | DOB        | emailID                  |
++----+-----------+----------+------------+--------------------------+
+| 15 | bandish   | karnik   | 1987-12-30 | bandish.karnik@gmail.com |
++----+-----------+----------+------------+--------------------------+
+1 row in set (0.00 sec)
+
+Q5.List namefirst, namelast, and emailID ofstudent whoses tudent namefirstis ‘Nitish’.
+
+select namefirst, namelast, emailID from student where namefirst='Nitish';
++-----------+----------+------------------------+
+| namefirst | namelast | emailID                |
++-----------+----------+------------------------+
+| nitish    | patil    | nitish.patil@gmail.com |
++-----------+----------+------------------------+
+
+Q6. 6. List all students having IDgreater than equal to 12.
+mysql> SELECT namefirst, ID FROM student where ID > 12;
++-----------+----+
+| namefirst | ID |
++-----------+----+
+| nrupali   | 13 |
+| supriya   | 14 |
+| bandish   | 15 |
+| sangita   | 16 |
+| sangita   | 17 |
+| rahul     | 18 |
+| bhavin    | 19 |
+| kaushal   | 20 |
+| pankaj    | 21 |
+| rajan     | 22 |
+| bhavin    | 23 |
+| mukesh    | 24 |
+| dilu      | 25 |
+| sonam     | 26 |
+| rohit     | 27 |
+| raj       | 28 |
++-----------+----+
+16 rows in set (0.00 sec)
+
+Q7: List all student detailswhose DOB is ‘1980-12-01’
+
+mysql> select * from student where DOB= '1980-12-01';
++----+-----------+----------+------------+-----------------------+
+| ID | namefirst | namelast | DOB        | emailID               |
++----+-----------+----------+------------+-----------------------+
+|  6 | lala      | prasad   | 1980-12-01 | lala.prasad@gmail.com |
++----+-----------+----------+------------+-----------------------+
+1 row in set (0.00 sec)
+
+Q 8. Display the phone details where student ID is 5;
+select number, studentID from Student_Phone where ID=5;
++------------+-----------+
+| number     | studentID |
++------------+-----------+
+| 7032300001 |         5 |
++------------+-----------+
+1 row in set (0.00 sec)
+Q 9. List studentaddress whosestudent ID is 10.
+
+
+
+
